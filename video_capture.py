@@ -2,6 +2,11 @@ import cv2
 import pickle
 import cvzone
 import numpy as np
+import requests
+
+response = requests.get('http://localhost:8080/get_booked_slot')
+data = response.json()
+booked_slot = data['booked_slot']
 
 width, height = 130, 55
 
@@ -51,7 +56,132 @@ while True:
     cv2.rectangle(img, (1920, 210), (2180, 480), (255, 255, 255), 3)
     cv2.rectangle(img, (150, 2075), (440, 1260), (255, 255, 255), 3)
     cv2.rectangle(img, (2800, 1080), (3070, 1320), (255, 255, 255), 3)
+    
 
+    if booked_slot == 'id1':
+        cv2.rectangle(img, (3250, 1075), (3250 + width, 1075 + height), (0, 255, 0), 2)
+    else:
+        cv2.rectangle(img, (3250, 1075), (3250 + width, 1075 + height), (0, 0, 255), 2)
+    
+    if booked_slot == 2:
+        cv2.rectangle(img, (3250, 1138), (3250 + width, 1138 + height), (0, 0, 255), 2)
+    else:
+        cv2.rectangle(img, (3250, 1138), (3250 + width, 1138 + height), (0, 255, 0), 2)
+    
+    if booked_slot == 'id3':
+        cv2.rectangle(img, (3250, 1200), (3250 + width, 1200 + height), (0, 255, 0), 2)
+    else:
+        cv2.rectangle(img, (3250, 1200), (3250 + width, 1200 + height), (0, 0, 255), 2)
+        
+    if booked_slot == 4:
+        cv2.rectangle(img, (3250, 1260), (3250 + width, 1260 + height), (0, 0, 255), 2)
+    else:
+        cv2.rectangle(img, (3250, 1260), (3250 + width, 1260 + height), (0, 255, 0), 2)
+        
+    if booked_slot == 5:
+        cv2.rectangle(img, (3250, 1320), (3250 + width, 1320 + height), (0, 0, 255), 2)
+    else:
+        cv2.rectangle(img, (3250, 1320), (3250 + width, 1320 + height), (0, 255, 0), 2)
+        
+    if booked_slot == 6:
+        cv2.rectangle(img, (3250, 1380), (3250 + width, 1380 + height), (0, 0, 255), 2)
+    else:
+        cv2.rectangle(img, (3250, 1380), (3250 + width, 1380 + height), (0, 255, 0), 2)
+        
+    if booked_slot == 'id7':
+        cv2.rectangle(img, (3250, 1440), (3250 + width, 1440 + height), (0, 255, 0), 2)
+    else:
+        cv2.rectangle(img, (3250, 1440), (3250 + width, 1440 + height), (0, 0, 255), 2)
+        
+    if booked_slot == 8:
+        cv2.rectangle(img, (3250, 1500), (3250 + width, 1500 + height), (0, 0, 255), 2)
+    else:
+        cv2.rectangle(img, (3250, 1500), (3250 + width, 1500 + height), (0, 255, 0), 2)
+        
+    if booked_slot == 9:
+        cv2.rectangle(img, (3250, 1560), (3250 + width, 1560 + height), (0, 0, 255), 2)
+    else:
+        cv2.rectangle(img, (3250, 1560), (3250 + width, 1560 + height), (0, 255, 0), 2)
+        
+    if booked_slot == 10:
+        cv2.rectangle(img, (3250, 1620), (3250 + width, 1620 + height), (0, 0, 255), 2)
+    else:
+        cv2.rectangle(img, (3250, 1620), (3250 + width, 1620 + height), (0, 255, 0), 2)
+        
+    if booked_slot == 11:
+        cv2.rectangle(img, (3250, 1680), (3250 + width, 1680 + height), (0, 0, 255), 2)
+    else:
+        cv2.rectangle(img, (3250, 1680), (3250 + width, 1680 + height), (0, 255, 0), 2)
+            
+    if booked_slot == 'id12':
+        cv2.rectangle(img, (3250, 1740), (3250 + width, 1740 + height), (0, 255, 0), 2)
+    else:
+        cv2.rectangle(img, (3250, 1740), (3250 + width, 1740 + height), (0, 0, 255), 2)
+        
+
+    
+    
+    if booked_slot == 13:
+        cv2.rectangle(img, (3439, 1075), (3439 + width, 1075 + height), (0, 0, 255), 2)
+    else:
+        cv2.rectangle(img, (3439, 1075), (3439 + width, 1075 + height), (0, 255, 0), 2)
+    
+    if booked_slot == 14:
+        cv2.rectangle(img, (3439, 1138), (3439 + width, 1138 + height), (0, 0, 255), 2)
+    else:
+        cv2.rectangle(img, (3439, 1138), (3439 + width, 1138 + height), (0, 255, 0), 2)
+        
+    if booked_slot == 15:
+        cv2.rectangle(img, (3439, 1200), (3439 + width, 1200 + height), (0, 0, 255), 2)
+    else:
+        cv2.rectangle(img, (3439, 1200), (3439 + width, 1200 + height), (0, 255, 0), 2)
+        
+    if booked_slot == 16:
+        cv2.rectangle(img, (3439, 1260), (3439 + width, 1260 + height), (0, 0, 255), 2)
+    else:
+        cv2.rectangle(img, (3439, 1260), (3439 + width, 1260 + height), (0, 255, 0), 2)
+        
+    if booked_slot == 17:
+        cv2.rectangle(img, (3439, 1320), (3439 + width, 1320 + height), (0, 0, 255), 2)
+    else:
+        cv2.rectangle(img, (3439, 1320), (3439 + width, 1320 + height), (0, 255, 0), 2)
+        
+    if booked_slot == 18:
+        cv2.rectangle(img, (3439, 1380), (3439 + width, 1380 + height), (0, 0, 255), 2)
+    else:
+        cv2.rectangle(img, (3439, 1380), (3439 + width, 1380 + height), (0, 255, 0), 2)
+        
+    if booked_slot == 19:
+        cv2.rectangle(img, (3439, 1440), (3439 + width, 1440 + height), (0, 0, 255), 2)
+    else:
+        cv2.rectangle(img, (3439, 1440), (3439 + width, 1440 + height), (0, 255, 0), 2)
+        
+    if booked_slot == 20:
+        cv2.rectangle(img, (3439, 1500), (3439 + width, 1500 + height), (0, 0, 255), 2)
+    else:
+        cv2.rectangle(img, (3439, 1500), (3439 + width, 1500 + height), (0, 255, 0), 2)
+        
+    if booked_slot == 'id21':
+        cv2.rectangle(img, (3439, 1560), (3439 + width, 1560 + height), (0, 255, 0), 2)
+    else:
+        cv2.rectangle(img, (3439, 1560), (3439 + width, 1560 + height), (0, 0, 255), 2)
+        
+    if booked_slot == 22:
+        cv2.rectangle(img, (3439, 1620), (3439 + width, 1620 + height), (0, 0, 255), 2)
+    else:
+        cv2.rectangle(img, (3439, 1620), (3439 + width, 1620 + height), (0, 255, 0), 2)
+        
+    if booked_slot == 23:
+        cv2.rectangle(img, (3439, 1680), (3439 + width, 1680 + height), (0, 0, 255), 2)
+    else:
+        cv2.rectangle(img, (3439, 1680), (3439 + width, 1680 + height), (0, 255, 0), 2)
+        
+    if booked_slot == 'id24':
+        cv2.rectangle(img, (3439, 1740), (3439 + width, 1740 + height), (0, 255, 0), 2)
+    else:
+        cv2.rectangle(img, (3439, 1740), (3439 + width, 1740 + height), (0, 0, 255), 2)
+    
+  
     
     imgGray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     imgBlur = cv2.GaussianBlur(imgGray, (3, 3), 1)
